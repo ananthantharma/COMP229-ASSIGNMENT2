@@ -88,6 +88,7 @@ export function ProcessAddPage(req: Request, res: Response, next: NextFunction):
   // instantiate a new contact
   let newContact = new Contact
   ({
+    "_id": id,
     "name": req.body.name,
     "phone": req.body.phone,
     "email": req.body.email

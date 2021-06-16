@@ -50,7 +50,6 @@ function ProcessEditPage(req, res, next) {
 exports.ProcessEditPage = ProcessEditPage;
 function ProcessAddPage(req, res, next) {
     let newContact = new contact_1.default({
-        "_id": id,
         "name": req.body.name,
         "phone": req.body.phone,
         "email": req.body.email
