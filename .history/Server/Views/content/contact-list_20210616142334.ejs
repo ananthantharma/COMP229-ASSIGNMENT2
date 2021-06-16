@@ -8,11 +8,11 @@
         <% } %>
 
 
-
+<p><button onclick="mysortTable()">Sorting table data</button></p>
 
         <table class="table table-dark table-striped table-bordered table-hover" id="sortTable">
   
-       <p><button onclick="mysortTable()">Sorting table data</button></p>
+       
   
   
             <thead class="table-dark">
@@ -50,10 +50,32 @@
 
 
             </tbody>
-            
           </table>
           
-
+<script>
+function mysortTable() {
+var tables, rows, sorting, c, a, b, tblsort;
+tables = document.getElementById("sortingTable");
+sorting = true;
+while (sorting) {
+sorting = false;
+rows = tables.rows;
+for (c = 1; c < (rows.length - 1); c++) {
+tblsort = false;
+a = rows[c].getElementsByTagName("TD")[0];
+b = rows[c + 1].getElementsByTagName("TD")[0];
+if (a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()) {
+tblsort = true;
+break;
+}
+}
+if (tblsort) {
+rows[c].parentNode.insertBefore(rows[c + 1], rows[c]);
+sorting = true;
+}
+}
+}
+</script>
 
 
     </div>

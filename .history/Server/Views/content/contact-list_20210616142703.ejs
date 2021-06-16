@@ -8,11 +8,11 @@
         <% } %>
 
 
-
+<p><button onclick="mysortTable()">Sorting table data</button></p>
 
         <table class="table table-dark table-striped table-bordered table-hover" id="sortTable">
   
-       <p><button onclick="mysortTable()">Sorting table data</button></p>
+       
   
   
             <thead class="table-dark">
@@ -50,12 +50,13 @@
 
 
             </tbody>
-            
           </table>
           
 
 
 
     </div>
-    
+    <script>
+$('#sortTable').DataTable();
+</script>
 </div>
