@@ -3,12 +3,12 @@ const Schema = mongoose.Schema; // Schema alias
 
 const ContactSchema = new Schema
 ({
-    name: String,
-    phone: String,
-    email: String
+    FullName: String,
+    EmailAddress: String,
+    ContactNumber: String
 },
 {
-    collection: "contact"
+    collection: "contacts"
 });
 
 const Model = mongoose.model("Contact", ContactSchema);
