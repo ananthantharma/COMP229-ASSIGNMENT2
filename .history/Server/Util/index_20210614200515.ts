@@ -1,9 +1,3 @@
-/* Student Name: Ananthan Tharmavelautham
-Student #:301175762
-Date: 06/18/2021
-File Name: COMP229 - Assignment 2 
-*/
-
 import express, { Request, Response, NextFunction } from 'express';
 
 import * as DBConfig from '../Config/db';
