@@ -15,10 +15,9 @@
        
   
   
-            <thead class="table-dark">
+            <thead class="table-dark" *ngFor="let col of tableHeaders" (click)="sort(col.propertyName)>
               <tr>
-                
-                <th scope="col" >#</th>
+                <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Phone#</th>
                 <th scope="col">Email</th>
